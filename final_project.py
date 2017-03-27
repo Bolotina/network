@@ -117,7 +117,9 @@ def count_common_connections(network, user_A, user_B):
 
 #print count_common_connections(create_data_structure(string_input), 'Bryant', 'Olive')
 
-def find_path_to_friend(network, user_A, user_B, path=[]):
+def find_path_to_friend(network, user_A, user_B, path=None):
+    if path is None:
+        path = []
     path = path + [user_A]
     if user_A == user_B:
         return path
